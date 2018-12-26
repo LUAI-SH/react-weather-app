@@ -16,6 +16,7 @@ class App extends Component {
 
   async componentDidMount() {
     const permissionState = await checkLocationPermission();
+    alert(permissionState);
     if(permissionState === "denied") {
       this.setState({ isLocationEnabled: false });
       return;
