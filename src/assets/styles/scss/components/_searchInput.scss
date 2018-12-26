@@ -1,0 +1,42 @@
+.geosuggest {
+  font-size: $default-font-size;
+  position: relative;
+  margin: 0 auto;
+  padding: 1.8rem 0;
+  &__input-wrapper {
+      
+  }
+
+  &__input {
+    border: 1px solid $color-grey-light-2;
+    background-color: $color-grey-light-1;
+    width: 85%;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    &:focus {
+      border: 1px solid $color-grey-dark;
+    }
+  }
+  &__suggests-wrapper {
+    width: 84%;
+    background-color: $color-grey-light-2;
+    text-align: left;
+    position: absolute;
+    border-radius: 0 0 1rem 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  }
+  &__suggests {
+    //ul
+    list-style-type: none;
+    padding: 1rem;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__item {
+    margin-top: 0.8rem;
+  }
+}

@@ -1,0 +1,39 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin scale-font-size-by($font-size, $factor) {
+  font-size: $font-size* $factor;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media only screen and (min-width: 20em) { // > 320px
+        @content;
+      } 
+    }
+    @if $breakpoint == tab-port {
+      @media only screen and (min-width: 37.5em) { // > 600px
+        @content;
+      } 
+    }
+    @if $breakpoint == tab-land {
+      @media only screen and (min-width: 56.25em) {
+        @content;
+      } //900px
+    }
+    @if $breakpoint == desktop {
+      @media only screen and (min-width: 75em) {
+        @content;
+      } //1200px
+    }
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) {
+        @content;
+      } //1800
+    }
+  }

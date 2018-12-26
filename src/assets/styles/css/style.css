@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@media only screen and (min-width: 20em) {
+  html {
+    font-size: 50%; } }
+
+@media only screen and (min-width: 37.5em) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (min-width: 56.25em) {
+  html {
+    font-size: 62.5%; } }
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+*:focus {
+  outline: none; }
+
+body {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+
+.u-capitalize {
+  text-transform: capitalize; }
+
+.u-font-size-xxl {
+  font-size: 12.8rem; }
+
+.u-font-size-xl {
+  font-size: 9.6rem; }
+
+.u-font-size-l {
+  font-size: 6.4rem; }
+
+.u-font-size-m {
+  font-size: 3.2rem; }
+
+.u-font-size-s {
+  font-size: 1.92rem; }
+
+.u-nowrap {
+  white-space: nowrap; }
+
+.weather-details {
+  font-size: 1.6rem;
+  color: #fff;
+  position: relative;
+  margin-top: 8rem; }
+  .weather-details__item {
+    margin-bottom: 2rem; }
+    .weather-details__item:first-child {
+      font-weight: 100;
+      letter-spacing: -0.4rem; }
+    .weather-details__item:nth-child(2) {
+      margin-bottom: 1rem; }
+
+.btn {
+  margin-top: 5rem;
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 10rem;
+  background-color: #fff; }
+
+.bg-dark {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.warning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background-color: #f5f540;
+  padding: 1.5rem; }
+
+.geosuggest {
+  font-size: 1.6rem;
+  position: relative;
+  margin: 0 auto;
+  padding: 1.8rem 0; }
+  .geosuggest__input {
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    width: 85%;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 4px; }
+    .geosuggest__input:focus {
+      border: 1px solid #777; }
+  .geosuggest__suggests-wrapper {
+    width: 84%;
+    background-color: #eee;
+    text-align: left;
+    position: absolute;
+    border-radius: 0 0 1rem 1rem;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .geosuggest__suggests {
+    list-style-type: none;
+    padding: 1rem; }
+    .geosuggest__suggests--hidden {
+      display: none; }
+  .geosuggest__item {
+    margin-top: 0.8rem; }
+
+.loader {
+  position: fixed;
+  bottom: 5rem;
+  right: 5%; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1522011916481-b7f27c0bf69b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80");
+  background-repeat: no-repeat;
+  background-size: cover; }

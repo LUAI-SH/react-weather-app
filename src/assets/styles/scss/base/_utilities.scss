@@ -1,0 +1,27 @@
+.u-capitalize {
+  text-transform: capitalize;
+}
+
+.u-font-size-xxl {
+  @include scale-font-size-by($default-font-size, 8);
+}
+
+.u-font-size-xl {
+  @include scale-font-size-by($default-font-size, 6);
+}
+
+.u-font-size-l {
+  @include scale-font-size-by($default-font-size, 4);
+}
+
+.u-font-size-m {
+  @include scale-font-size-by($default-font-size, 2);
+}
+
+.u-font-size-s {
+  @include scale-font-size-by($default-font-size, 1.2);
+}
+
+.u-nowrap {
+  white-space: nowrap
+}
