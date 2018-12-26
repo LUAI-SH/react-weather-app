@@ -11,9 +11,17 @@ function getPosition() {
 export default async function getLocation() {
   const { coords } = await getPosition();
   const { latitude: lat, longitude: lon } = coords;
-  const { data } = await http.get(
-    `${config.reverseGeo.endpoint}${lat},${lon}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
+  console.log(
+    `${config.reverseGeo.endpoint}${lat},${lon}&key=${
+      process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+    }`
   );
+  const { data } = await http.get(
+    `${config.reverseGeo.endpoint}${lat},${lon}&key=${
+      process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+    }`
+  );
+  console.log(data);
   const fullAddress = data.plus_code.compound_code;
   let address = fullAddress.split(" ");
   address = `${address[1]}, ${address[2]}`;
