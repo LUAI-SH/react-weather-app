@@ -88,7 +88,7 @@ class App extends Component {
       <div>
         {isRendering && (
           <div className="loader">
-            <Loader type="Oval" color="#FFF" height="70" width="70" />
+            <Loader type="Oval" color="#FFF" height="30" width="30" />
           </div>
         )}
         <Geosuggest
