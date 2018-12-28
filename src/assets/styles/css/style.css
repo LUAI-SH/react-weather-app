@@ -57,6 +57,7 @@ body {
   font-size: 1.6rem;
   color: #fff;
   position: relative;
+  text-shadow: 1px 1px 15px #000;
   margin-top: 8rem; }
   .weather-details__item {
     margin-bottom: 2rem; }
