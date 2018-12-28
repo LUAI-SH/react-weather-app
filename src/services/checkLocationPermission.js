@@ -1,15 +1,27 @@
-export default function checkLocationPermission() {
-  return new Promise((resolve, reject) => {
-    if (!navigator.permissions)
-      // Permission API was not implemented
-      return reject(new Error("Permission API is not supported"));
+const locationOptions = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
 
-    // Permission API is implemented
-    navigator.permissions.query({ name: "geolocation" }).then(
-      permission => {
-        const { state } = permission;
-        resolve(state);
-      }
-    );
+export default async function checkLocationPermission() {
+  const { geolocation } = navigator;
+  if (!geolocation) return "denied";
+
+  try {
+    const result = await getPosition(locationOptions);
+    console.log(result);
+    return "granted";
+  } catch (ex) {
+    return "denied";
+  }
+}
+
+
+const getPosition =  (options) => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options);
   });
 }
+
+
