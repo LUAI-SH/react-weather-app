@@ -45,10 +45,17 @@ class App extends Component {
     this.setState({ city, weatherInformation, isRendering: false });
   };
 
+  separateByComma = (input) => {
+    const splittedStr = input.split(" ");
+    const result =  splittedStr.map(item => item.replace(",", "") );
+    return result.join(",");
+  }
+
   onSuggestSelect = async suggest => {
     this.setState({ isRendering: true });
     if (!suggest) return;
-    const { label: city } = suggest;
+    const { label } = suggest;
+    const city = this.separateByComma(label);
     try {
       const { data: weatherData } = await getWeatherForCity(city);
       const weatherInformation = {
